@@ -1,13 +1,6 @@
 from woocommerce import API
 import time
-import os
 
-def llaveSeguridad():
-    mes = time.strftime('%m', time.localtime())
-    if mes=="06":
-        print("ha ocurrido un error.")
-        corte = input(" ")
-        os.exit()
 
 
 def log_write(x):
@@ -16,7 +9,6 @@ def log_write(x):
     log.write('\n')
     log.close()
 
-llaveSeguridad()
 hoy = time.strftime(' %d-%m-%Y', time.localtime())
 wcapi = API(
     url="http://frutosare.com.ar/",
